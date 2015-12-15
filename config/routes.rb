@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   post 'login'    =>  'sessions#create'
   delete 'logout' =>  'sessions#destroy'
   resources :users
+  # this place for chapter 10 (Email activate)
+  resources :microposts, only: [:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
